@@ -1,0 +1,34 @@
+#add_dir {
+	background:url('../icons/icon_add.png');
+	border:0px;
+	width:16px;
+	height:16px;
+	opacity:0.25;
+	filter:alpha(opacity=25);
+}
+
+#delete_dir {
+	background:url('../icons/icon_delete.png');
+	border:0px;
+	width:16px;
+	height:16px;
+	opacity:0.25;
+	filter:alpha(opacity=25);
+}
+#add_path {
+	background:url('../icons/icon_add.png');
+	border:0px;
+	width:16px;
+	height:16px;
+	opacity:0.25;
+	filter:alpha(opacity=25);
+}
+
+#delete_path {
+	background:url('../icons/icon_delete.png');
+	border:0px;
+	width:16px;
+	height:16px;
+	opacity:0.25;
+	filter:alpha(opacity=25);
+}
