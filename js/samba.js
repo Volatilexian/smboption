@@ -1100,7 +1100,7 @@ function SMB_saveApply()
 	}
 	else
 	{
-		var url = document.getElementsByName("url_samba")[0].value;
+		var url = "action/apply.php";//document.getElementsByName("url_samba")[0].value;
 		var file = document.getElementById("file").value;
 		var netbios = document.getElementsByName("netbiosname")[0].value;
 		
@@ -1127,8 +1127,8 @@ function SMB_saveApply()
 		$.ajax({
 		type: 'GET',
 		async: true,
-		url: url+"/samba_saveApply",
-		data: "file="+file+"&netbios="+netbios,
+		url: url,
+		data: "netbios="+netbios,
 		success:function(x)
 				{
 					document.getElementById("waittips").value = 1;

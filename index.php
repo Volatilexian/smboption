@@ -189,7 +189,7 @@
 
 
                                                                             <script>
-                                                                                var endir = document.getElementsByName("ASMT    2105-HomeCloud");
+                                                                                var endir = document.getElementsByName("<?php echo $disk; ?>-<?php echo $partition[0]; ?>");
                                                                                 if (endir.length != 0)
                                                                                 {
                                                                                     endir[endir.length - 1].src = "icons/joinbottom.gif";

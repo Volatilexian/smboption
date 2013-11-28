@@ -36,4 +36,3 @@ function getSambaUser() {
      
      return preg_split('/\n/', trim($out));
 }
-print_r(getSambaUser());
