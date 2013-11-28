@@ -32,5 +32,8 @@ function getDisk(){
 }
 
 function getSambaUser() {
-    $users = she
+     $out = shell_exec("cat /etc/samba/smbpasswd | awk '{FS=\":\"}{print $1}'");
+     
+     return preg_split('/\n/', trim($out));
 }
+print_r(getSambaUser());

@@ -233,29 +233,24 @@
 <!--tr><td width="80px"><img src="/luci-static/resources/img/horon.gif" /></td></tr-->
                                             <tr></tr><tr><td colspan="4" ><div id="spilt"></div></td></tr><tr></tr>
 
+                                            
+                                            <?php 
+                                            $users = getSambaUser();
+                                            $i = 1;
+                                            foreach($users as $user)
+                                            {
+                                            ?>
                                             <tr>
-                                                <td>admin</td><input type="hidden" name="tmp_user" value="admin" />
-                                                <td><input type="radio" class="radios" name="admin1" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");' /></td>
-                                                <td><input type="radio" class="radios" name="admin1" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");'/></td>
-                                                <td><input type="radio" class="radios" name="admin1" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");' /></td>
+                                                <td><?php echo $user; ?></td><input type="hidden" name="tmp_user" value="<?php echo $user; ?>" />
+                                                <td><input type="radio" class="radios" name="<?php echo $user.$i; ?>" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");' /></td>
+                                                <td><input type="radio" class="radios" name="<?php echo $user.$i; ?>" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");'/></td>
+                                                <td><input type="radio" class="radios" name="<?php echo $user.$i; ?>" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");' /></td>
                                             </tr>
-
-                                            <tr>
-                                                <td>chen</td><input type="hidden" name="tmp_user" value="chen" />
-                                                <td><input type="radio" class="radios" name="chen2" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");' /></td>
-                                                <td><input type="radio" class="radios" name="chen2" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");'/></td>
-                                                <td><input type="radio" class="radios" name="chen2" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");' /></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>wuhan</td><input type="hidden" name="tmp_user" value="wuhan" />
-                                                <td><input type="radio" class="radios" name="wuhan3" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");' /></td>
-                                                <td><input type="radio" class="radios" name="wuhan3" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");'/></td>
-                                                <td><input type="radio" class="radios" name="wuhan3" onclick='SMB_userRadioset("/cgi-bin/luci/;stok=2983b8b1f3e58abe371e6050ff7aaa4b/samba");' /></td>
-                                            </tr>
-
-
-
+                                            <?php
+                                            $i++;
+                                            }
+                                            ?>
+                                            
                                         </table>
                                     </td>
 
@@ -283,20 +278,9 @@
                                 SMB_load();
                             </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                         </fieldset>
+                        
+                        
                         <table id="button">
                             <tr id="button_tr">
                                 <td id="button_space"></td>
